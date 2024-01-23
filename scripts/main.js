@@ -1,7 +1,7 @@
-const myImage = document.querySelector("img");
+let myImage = document.querySelector("img");
 
 myImage.onclick = () => {
-  const mySrc = myImage.getAttribute("src");
+  let mySrc = myImage.getAttribute("src");
   if (mySrc === "images/IMG_5406.JPG") {
     myImage.setAttribute("src", "images/IMG_5741.JPG");
   } else {
@@ -16,7 +16,7 @@ myButton.onclick = () => {
 let myHeading = document.querySelector("h1")
 
 function setUserName() {
-    const myName = prompt("Please enter your name.");
+    let myName = prompt("Please enter your name.");
     if (!myName) {
       setUserName();
     } else {
@@ -28,6 +28,6 @@ function setUserName() {
 if (!localstorage.getItem("name")) {
     setUserName();
 } else {
-    const storedName= localStorage.getItem("name");
+    let storedName= localStorage.getItem("name");
     myHeading.textContent = 'Baby alligators are cool, ${storedName}';
 }

@@ -26,9 +26,9 @@ if (!localstorage.getItem("name")) {
     setUserName();
 } else {
   let storedName= localStorage.getItem("name");
-  myHeading.textContent = 'Baby alligators are cool, ${storedName}';
+  myHeading.innerHTML = 'Baby alligators are cool, ${storedName}';
 }
 
-myButton.onclick = () => {
+myButton.onclick = function() {
     setUserName();
   }

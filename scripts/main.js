@@ -10,9 +10,6 @@ myImage.onclick = () => {
 };
 
 let myButton = document.querySelector("button")
-myButton.onclick = () => {
-    setUserName();
-  };
 let myHeading = document.querySelector("h1")
 
 function setUserName() {
@@ -31,3 +28,7 @@ if (!localstorage.getItem("name")) {
     let storedName= localStorage.getItem("name");
     myHeading.textContent = 'Baby alligators are cool, ${storedName}';
 }
+
+myButton.onclick = () => {
+    setUserName();
+  }

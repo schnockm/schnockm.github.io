@@ -3,9 +3,9 @@ const myImage = document.querySelector("img");
 myImage.onclick = () => {
   const mySrc = myImage.getAttribute("src");
   if (mySrc === "images/babyalligator.JPG") {
-    myImage.setAttribute("src", "images/babyalligator2.png");
+    myImage.setAttribute("src", "images/IMG_5741");
   } else {
-    myImage.setAttribute("src", "images/babyalligator.JPG");
+    myImage.setAttribute("src", "images/image_67201025");
   }
 };
 

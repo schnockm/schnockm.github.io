@@ -7,7 +7,7 @@ myImage.onclick = () => {
   } else {
     myImage.setAttribute("src", "images/IMG_5406.JPG");
   }
-};
+}
 
 let myButton = document.querySelector("button")
 let myHeading = document.querySelector("h1")
@@ -25,8 +25,8 @@ function setUserName() {
 if (!localstorage.getItem("name")) {
     setUserName();
 } else {
-    let storedName= localStorage.getItem("name");
-    myHeading.textContent = 'Baby alligators are cool, ${storedName}';
+  let storedName= localStorage.getItem("name");
+  myHeading.textContent = 'Baby alligators are cool, ${storedName}';
 }
 
 myButton.onclick = () => {

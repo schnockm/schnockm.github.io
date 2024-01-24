@@ -1,4 +1,14 @@
 const myImage = document.querySelector("img");
+
+myImage.onclick = () => {
+  const mySrc = myImage.getAttribute("src");
+  if (mySrc === "images/IMG_5514.jpg") {
+    myImage.setAttribute("src", "images/IMG_5743.jpg");
+  } else {
+    myImage.setAttribute("src", "images/IMG_5514.jpg");
+  }
+}
+
 const myButton = document.querySelector("button");
 const myColorButton = document.getElementById("changeColorButton");
 const myHeading = document.querySelector("h1");
@@ -10,10 +20,12 @@ function setUserName() {
     myHeading.textContent = "Hello, " + myName + " nice to meet you!";
   }
 }
-
-function changeFontColor() {
-  // Change the font color of the title to yellow
-  myHeading.style.color = "yellow";
+myColorButton.onclick = () +> {
+  if (myHeading.style.color === "white") {
+   myHeading.style.color === "yellow");
+  } else {
+  myHeading.style.color === "white";
+  }
 }
 
 // Reset font color to white when the page loads

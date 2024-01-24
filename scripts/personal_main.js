@@ -10,7 +10,7 @@ myImage.onclick = () => {
 }
 
 let myButton = document.querySelector("button");
-let myColorButton = document.getElementByID("changecolorbutton");
+let myColorButton = document.getElementById("changecolorbutton");
 let myHeading = document.querySelector("h1");
 
 function setUserName() {

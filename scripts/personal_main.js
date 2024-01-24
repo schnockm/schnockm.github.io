@@ -21,15 +21,13 @@ function setUserName() {
   }
 }
 myColorButton.onclick = () +> {
-  if (myHeading.style.color === "white") {
-   myHeading.style.color === "yellow");
+  const myColor = myHeading.style.color
+  if (myColor === "white") {
+    myColor === "yellow");
   } else {
-  myHeading.style.color === "white";
+  myColor === "white";
   }
 }
-
-// Reset font color to white when the page loads
-myHeading.style.color = "white";
 
 if (!localStorage.getItem("name")) {
   setUserName();
@@ -42,8 +40,6 @@ myButton.onclick = function() {
   setUserName();
 }
 
-myColorButton.onclick = function() {
-  changeFontColor();
-};
+
                     
 

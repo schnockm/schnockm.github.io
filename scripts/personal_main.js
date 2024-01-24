@@ -10,7 +10,7 @@ myImage.onclick = () => {
 }
 
 let myButton = document.querySelector("button");
-let myColorButton = document.getElementById("changeColorButton);
+let myColorButton = document.getElementById("changeColorButton");
 let myHeading = document.querySelector("h1");
 
 function setUserName() {
@@ -37,9 +37,9 @@ myButton.onclick = function() {
 myColorButton.onclick = function() { 
   const myColor = myHeading.style.color;
   if (myColor === "white") {
-    myColor = "yellow");
+    myColor = "yellow";
   } else {
-    myColor = "white";
+    myHeading.style.color = "white";
   }
 }
 

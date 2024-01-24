@@ -19,15 +19,15 @@ function setUserName() {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.innerHTML = "Hello, " + myName, + "nice to meet you!";
+    myHeading.innerHTML = "Hello, " + myName + " nice to meet you!"; // Fix the comma to +
+  }
 }
-
 
 if (!localStorage.getItem("name")) {
   setUserName();
 } else {
   const storedName = localStorage.getItem("name");
-  myHeading.textContent = "Hello, " + myName, + "nice to meet you!";
+  myHeading.textContent = "Hello, " + storedName + " nice to meet you!"; // Use storedName here
 }
 
 myButton.onclick = function() {
@@ -46,6 +46,5 @@ function toggleFontColor() {
 myColorButton.onclick = function() { 
   toggleFontColor();
 }
-
                     
 

@@ -1,22 +1,12 @@
 const myImage = document.querySelector("img");
-
-myImage.onclick = () => {
-  const mySrc = myImage.getAttribute("src");
-  if (mySrc === "images/IMG_5514.jpg") {
-    myImage.setAttribute("src", "images/IMG_5743.jpg");
-  } else {
-    myImage.setAttribute("src", "images/IMG_5514.jpg");
-  }
-}
-
-let myButton = document.querySelector("button");
-let myColorButton = document.getElementById("changeColorButton");
-let myHeading = document.querySelector("h1");
+const myButton = document.querySelector("button");
+const myColorButton = document.getElementById("changeColorButton");
+const myHeading = document.querySelector("h1");
 
 function setUserName() {
   const myName = prompt("Please enter your name.");
   if (!myName) {
-    setUserName(); // Recursively call setUserName until a valid name is provided
+    setUserName();
   } else {
     localStorage.setItem("name", myName);
     myHeading.textContent = "Hello, " + myName + " nice to meet you!";
@@ -24,8 +14,11 @@ function setUserName() {
 }
 
 function changeFontColor() {
-  // Change the font color of the title to yellow
   myHeading.style.color = "yellow";
+}
+
+function resetFontColor() {
+  myHeading.style.color = "white";
 }
 
 if (!localStorage.getItem("name")) {
@@ -41,6 +34,7 @@ myButton.onclick = function() {
 
 myColorButton.onclick = function() {
   changeFontColor();
+  setTimeout(resetFontColor, 2000); 
 };
                     
 

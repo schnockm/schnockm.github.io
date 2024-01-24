@@ -34,13 +34,17 @@ myButton.onclick = function() {
   setUserName();
 }
 
-myColorButton.onclick = function() { 
+function toggleFontColor() {
   const myColor = myHeading.style.color;
   if (myColor === "white") {
-    myColor = "yellow";
+    myHeading.style.color = "yellow";
   } else {
     myHeading.style.color = "white";
   }
+}
+
+myColorButton.onclick = function() { 
+  toggleFontColor();
 }
 
                     

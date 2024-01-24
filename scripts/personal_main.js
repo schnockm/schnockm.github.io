@@ -14,13 +14,12 @@ let myColorButton = document.getElementById("changeColorButton");
 let myHeading = document.querySelector("h1");
 
 function setUserName() {
-  const myName = prompt("Please enter your name.");
-  if (!myName) {
+  let myName = prompt('Please enter your name.');
+  if(!myName) {
     setUserName();
   } else {
-    localStorage.setItem("name", myName);
-    myHeading.textContent = "Hello, " + myName + " nice to meet you!";
-  }
+    localStorage.setItem('name', myName);
+    myHeading.innerHTML = "Hello, " + myName, + "nice to meet you!";
 }
 
 

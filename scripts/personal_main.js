@@ -10,6 +10,7 @@ myImage.onclick = () => {
 }
 
 let myButton = document.querySelector("button");
+let myColorButton = document.getElementByID("changecolorbutton");
 let myHeading = document.querySelector("h1");
 
 function setUserName() {
@@ -26,11 +27,16 @@ if (!localStorage.getItem("name")) {
   setUserName();
 } else {
   const storedName = localStorage.getItem("name");
-  myHeading.textContent = "Hello, " + myName, + "nice to meet you!";
+  myHeading.textContent = "Hello, " + myName + "nice to meet you!";
 }
 
 myButton.onclick = function() {
   setUserName();
 }
+
+myColorButton.onclick = function() {
+  // Change the font color of the title to yellow
+  myHeading.style.color = "yellow";
+};
                     
 

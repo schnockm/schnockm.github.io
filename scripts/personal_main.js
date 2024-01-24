@@ -10,24 +10,29 @@ myImage.onclick = () => {
 }
 
 let myButton = document.querySelector("button");
-let myColorButton = document.getElementById("changecolorbutton");
+let myColorButton = document.getElementById("changeColorButton");
 let myHeading = document.querySelector("h1");
 
 function setUserName() {
   const myName = prompt("Please enter your name.");
   if (!myName) {
-    setUserName();
+    setUserName(); // Recursively call setUserName until a valid name is provided
   } else {
     localStorage.setItem("name", myName);
     myHeading.textContent = "Hello, " + myName + " nice to meet you!";
   }
 }
 
+function changeFontColor() {
+  // Change the font color of the title to yellow
+  myHeading.style.color = "yellow";
+}
+
 if (!localStorage.getItem("name")) {
   setUserName();
 } else {
   const storedName = localStorage.getItem("name");
-  myHeading.textContent = "Hello, " + myName + "nice to meet you!";
+  myHeading.textContent = "Hello, " + storedName + " nice to meet you!";
 }
 
 myButton.onclick = function() {
@@ -35,8 +40,7 @@ myButton.onclick = function() {
 }
 
 myColorButton.onclick = function() {
-  // Change the font color of the title to yellow
-  myHeading.style.color = "yellow";
+  changeFontColor();
 };
                     
 

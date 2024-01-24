@@ -26,11 +26,18 @@ img {
   margin: 0 auto;
 }
 
-p,
 li {
   font-size: 10px;
   font-family:"Lato", lato;
   line-height: 2;
   letter-spacing: 1px;
   color: white;
+}
+
+p {
+  font-size: 15px
+  font-family: "Rubik Burned", rubik-burned;
+  color: black;
+  line-height: 2;
+  letter-spacing: 1px;
 }

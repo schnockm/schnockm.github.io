@@ -19,7 +19,7 @@ function setUserName() {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.innerHTML = "Hello, " + myName + " nice to meet you!"; // Fix the comma to +
+    myHeading.innerHTML = "Hello, " + myName + " nice to meet you!";
   }
 }
 

@@ -9,7 +9,7 @@ myImage.onclick = () => {
   }
 }
 
-let myButton = document.getElemenyById("myButton");
+let myButton = document.querySelector("button");
 let myColorButton = document.getElementById("changeColorButton");
 let myHeading = document.querySelector("h1");
 
@@ -27,7 +27,7 @@ if (!localStorage.getItem("name")) {
   setUserName();
 } else {
   const storedName = localStorage.getItem("name");
-  myHeading.textContent = "Hello, " + storedName + " nice to meet you!"; // Use storedName here
+  myHeading.textContent = "Hello, " + storedName + " nice to meet you!"; 
 }
 
 myButton.onclick = function() {

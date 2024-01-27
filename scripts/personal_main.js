@@ -30,10 +30,6 @@ if (!localStorage.getItem("name")) {
   myHeading.textContent = "Hello, " + storedName + " nice to meet you!"; 
 }
 
-myButton.onclick = function() {
-  setUserName();
-}
-
 function toggleFontColor() {
   const myColor = myHeading.style.color;
   if (myColor === "white") {
@@ -41,6 +37,10 @@ function toggleFontColor() {
   } else {
     myHeading.style.color = "white";
   }
+}
+
+myButton.onclick = function() {
+  setUserName();
 }
 
 myColorButton.onclick = function() { 
